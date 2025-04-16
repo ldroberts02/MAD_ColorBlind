@@ -29,10 +29,12 @@
 
     <TableLayout
         android:id="@+id/leaderboard"
-        android:layout_width="409dp"
-        android:layout_height="630dp"
+        android:layout_width="400dp"
+        android:layout_height="367dp"
+        android:layout_marginBottom="236dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent">
 
         <TableRow
