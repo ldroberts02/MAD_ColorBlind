@@ -30,7 +30,7 @@ class Statistics: AppCompatActivity() {
 
         val button = findViewById<Button>(R.id.returnButton)
         button.setOnClickListener {
-            val intent = Intent(this@Statistics, ColorTest::class.java)
+            val intent = Intent(this@Statistics, IntroScreenActivity::class.java)
             startActivity(intent)
         }
 

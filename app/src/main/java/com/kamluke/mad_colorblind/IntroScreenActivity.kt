@@ -25,9 +25,9 @@ class IntroScreenActivity  : AppCompatActivity() {
         }
     }
 
-    fun loginButtonOnClick(view: View)
+    fun loginButtonOnClick(view: View) //for the button in intro.xml
     {
-        val intent = Intent(this@IntroScreenActivity, ColorTest::class.java)
+        val intent = Intent(this@IntroScreenActivity, ColorTest::class.java) //load colorTest.kt into variable
         startActivity(intent)
     }
 

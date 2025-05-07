@@ -113,10 +113,10 @@ class ColorTest: AppCompatActivity() {
             findViewById<Button>(R.id.button3).setEnabled(true)
         }
 
-        fun generateName(pokeNum: Int): Int
+        fun generateName(_num: Int): Int //get random number from list, but if it is the same as input, get a different number
         {
             var x :Int = Random().nextInt(numberListVar.count())
-            return if (x == pokeNum) {
+            return if (x == _num) {
                 if (x != 1) {
                     x - 1
                 } else {
@@ -126,7 +126,7 @@ class ColorTest: AppCompatActivity() {
                 x
             }
         }
-        fun newImage()
+        fun newImage() //generate random seed, from 1-20, then use that number as an index for two arrays, each with matching indexes per segment (image 1 = string "1")
         {
             var rand = Random();
             var testInt :Int= rand.nextInt(20);
@@ -136,8 +136,7 @@ class ColorTest: AppCompatActivity() {
 
 
             var randButton : Int = Random().nextInt(3)
-            randButton += 1
-            //R.drawable.image_1 is the parameters
+            randButton += 1 //random starts at 0, so add 1 since we're looking for 1-4
             findViewById<RadioButton>(R.id.radioButton).text  = if (randButton == 1) numberListVar[testInt] else numberListVar[generateName(currentNumber)];
             findViewById<RadioButton>(R.id.radioButton2).text = if (randButton == 2) numberListVar[testInt] else numberListVar[generateName(currentNumber)];
             findViewById<RadioButton>(R.id.radioButton3).text = if (randButton == 3) numberListVar[testInt] else numberListVar[generateName(currentNumber)];
@@ -169,18 +168,13 @@ class ColorTest: AppCompatActivity() {
 
             findViewById<Button>(R.id.button3).setEnabled(false)
             findViewById<TextView>(R.id.progressText).text =
-                "Progress: $currentProgress of $maxProgress and $score"
+                "Progress: $currentProgress of $maxProgress"
 
         }
     fun setScore(_score: Int)
     {
         score = _score;
 
-        // vari = (condition) ? true : false;
-
-        //findViewById<ImageView>(R.id.you_won_image).visibility = if (score > 5) View.VISIBLE else View.INVISIBLE;
-
-        //findViewById<TextView>(R.id.score_text).text = "Score: $score"
     }
 }
 
