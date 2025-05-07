@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MAD_ColorBlind</string>
+    <string name="test_display">Test In Progress...</string>
+    <string name="err">Error</string>
+    <string name="retry">Retry</string>
+    <string name="Exit">Quit</string>
+    <string name="backReturn">Return</string>
+    <string name="results">Results</string>
 </resources>
