@@ -6,7 +6,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import org.json.JSONArray
+import org.json.JSONObject
+
 
 class IntroScreenActivity  : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,5 +24,12 @@ class IntroScreenActivity  : AppCompatActivity() {
             insets
         }
     }
+
+    fun loginButtonOnClick(view: View)
+    {
+        val intent = Intent(this@IntroScreenActivity, ColorTest::class.java)
+        startActivity(intent)
+    }
+
 
 }
